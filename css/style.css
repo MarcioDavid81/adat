@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@font-face {
+    font-family: 'Aristotelica';
+    src: url('../font/Aristotelica.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #ff8802;
+    --secondary-color: #f9dbbd;
+    --text-color: #333;
+    --heading-color: #111;
+    --title-font: 'Aristotelica', sans-serif;
+    --text-font: 'Nunito', sans-serif;
+}
+body{
+    font-family: var(--text-font);
+}
+h1{
+    font-family: var(--title-font);
+    font-size: 2.5rem;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: 100px;
+}
+.header-container .btn-contato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--heading-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-right: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+
+    &:hover{
+        background-color: var(--heading-color);
+        color: var(--primary-color);
+    }
+}
+.logo img{
+    width: 150px;
+    height: 150px;
+}
+.menu-desktop{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+.menu-desktop ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 50px;
+}
+.menu-desktop ul li a{
+    text-decoration: none;
+    flex-wrap: nowrap;
+    color: var(--heading-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.5s ease;
+
+    &:hover{
+        color: var(--primary-color);
+    }
+}
+.btn-menu-mobile{
+    margin-right: 50px;
+    background: transparent;
+    border: none;
+    font-size: 2.5rem;
+    color: var(--heading-color);
+    display: none;
+}
+
+/*Menu mobile*/
+
+.menu-mobile{
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--secondary-color);
+    width: 0%;
+    overflow: hidden;
+    height: 100vh;
+    z-index: 5;
+    transition: 0.5s ease;
+
+    .btn-close{
+        background: transparent;
+        border: none;
+        font-size: 2rem;
+        color: var(--heading-color);
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        list-style: none;
+        gap: 30px;
+        margin-top: 20px;
+
+        a{
+            text-decoration: none;
+            color: var(--heading-color);
+            font-size: 1.5rem;
+            font-weight: 300;
+            padding: 20px 8%;
+            transition: 0.5s ease;
+            display: block;
+
+            &:hover{
+                background-color: var(--primary-color);
+            }
+        }
+    }
+}
+.menu-mobile.active ~ .overlay-menu{
+    display: block;
+}
+.overlay-menu{
+    background-color: #f9dbbd88;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    display: none;
+}
+.menu-mobile.active{
+    width: 70%;
+}
+
+
+
+
+
+/*Section banner*/
+.banner img{
+    width: 100%;
+    height: 100vh;
+
+}
+
+
+/*Section sobre*/
+.sobre{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 5%;
+    height: 100vh;
+}
+
+/*Media queries*/
+@media (width <= 830px){
+    .menu-desktop{
+        display: none;
+    }
+    .header-container .btn-contato{
+        display: none;
+    }
+    .btn-menu-mobile{
+        display: block;
+    }
+}
