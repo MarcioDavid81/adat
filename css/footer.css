@@ -1,0 +1,114 @@
+.footer-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    align-items: initial;
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+.footer-logo img{
+    width: 200px;
+    height: 200px;
+}
+
+.footer-menu ul{
+    list-style: none;
+}
+.footer-menu ul li a{
+    text-decoration: none;
+    color: var(--heading-color);
+    font-size: 1.2rem;
+    transition: 0.5s ease;
+
+    &:hover{
+        color: var(--primary-color);
+    }
+}
+
+
+.footer-sociais a{
+    padding: 15px;
+}
+.footer-sociais a i{
+    font-size: 2rem;
+    color: var(--heading-color);
+    transition: 0.5s ease;
+
+    &:hover{
+        color: var(--primary-color);
+    }
+}
+
+.footer-copy{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--heading-color);
+    padding: 1px 0;
+    font-size: 0.8rem;
+
+}
+.footer-copy a{
+    text-decoration: none;
+    color: white;
+    transition: 0.5s ease;
+
+    &:hover{
+        color: var(--heading-color-color);
+    }
+}
+
+/*Media queries*/
+
+@media (width <= 1020px){
+    .footer-container h2{
+        font-size: 1rem;
+    }
+    .footer-container p{
+        font-size: 0.8rem;
+    }
+    .footer-container ul li a{
+        font-size: 0.8rem;
+    }
+    .footer-container a img{
+        width: 150px;
+        height: 150px;
+    }
+    .footer-sociais a{
+        padding: 5px;
+    }
+    .footer-sociais a i{
+        font-size: 1.5rem;
+    }
+}
+@media (width <= 768px){
+    .footer-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .footer-container h2{
+        font-size: 1.5rem;
+    }
+    .footer-container p{
+        font-size: 1rem;
+    }
+    .footer-container ul li a{
+        font-size: 1rem;
+    }
+    .footer-container a img{
+        width: 150px;
+        height: 150px;
+    }
+    .footer-sociais a{
+        padding: 5px;
+    }
+    .footer-sociais a i{
+        font-size: 1.5rem;
+    }
+}
+@media (width<=600px){
+    .footer-copy{
+        font-size: 0.5rem;
+    }
+}

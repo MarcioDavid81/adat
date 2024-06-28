@@ -139,6 +139,7 @@ h1{
     display: block;
 }
 .overlay-menu{
+    backdrop-filter: blur(5px);
     background-color: #f9dbbd88;
     width: 100%;
     height: 100%;
@@ -173,7 +174,6 @@ h1{
     justify-content: center;
     gap: 50px;
     padding: 5%;
-    height: 100vh;
 }
 
 /*Media queries*/
