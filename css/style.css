@@ -214,4 +214,17 @@ h1{
     .banner img{
         height: 100%;
     }
+    .sobre{
+        grid-template-columns: 1fr;
+
+        h1{
+            font-size: 1.5rem;
+        }
+        h2{
+            font-size: 1.2rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+    }
 }
