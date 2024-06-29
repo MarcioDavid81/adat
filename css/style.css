@@ -254,7 +254,7 @@ h1{
     .banner img{
         height: 100%;
     }
-    .sobre, .doacao{
+    .sobre, .doacao, .qr{
         grid-template-columns: 1fr;
 
         h1{
