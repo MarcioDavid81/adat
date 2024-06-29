@@ -173,7 +173,7 @@ h1{
     justify-content: center;
     gap: 50px;
     padding: 5%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /*Media queries*/
